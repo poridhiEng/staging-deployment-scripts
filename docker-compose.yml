@@ -4,6 +4,8 @@ services:
     image: nginx
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./poridhi-ss.crt:/etc/nginx/poridhi-ss.crt
+      - ./poridhi-ss.key:/etc/nginx/poridhi-ss.key
     ports:
       - 80:80
       - 443:443
