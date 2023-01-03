@@ -4,8 +4,8 @@ services:
     image: nginx
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf
-      - ./poridhi-ss.crt:/etc/nginx/poridhi-ss.crt
-      - ./poridhi-ss.key:/etc/nginx/poridhi-ss.key
+      - /etc/letsencrypt/live/staging.poridhi.io/fullchain.pem:/etc/nginx/fullchain.pem
+      - /etc/letsencrypt/live/staging.poridhi.io/privkey.pem:/etc/nginx/privkey.pem
     ports:
       - 80:80
       - 443:443
